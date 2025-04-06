@@ -1,0 +1,132 @@
+/* Global settings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center; /* Horizontal alignment within the body */
+    align-items: center; /* Vertical alignment within the body */
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    animation: backgroundMovement 10s linear infinite;
+    position: relative;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@keyframes backgroundMovement {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;  
+}
+
+.left-side, .right-side {
+    flex: 1;
+    padding: 10px; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical alignment within the left/right side */
+    align-items: center; /* Horizontal alignment within the left/right side */
+}
+
+.image-section img {
+    width: 65%;
+    border-radius: 14px; /* Adjust this value for more or less rounding */
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(27, 27, 27, 0.2);
+    animation: fadeIn 4s forwards; /* Apply fade-in animation */
+}
+
+.details-box {
+    width: 80%; /* Decreased width */
+    padding: 25px; /* Reduced padding */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 8px 0; /* Reduced margin */
+    display: flex; /* Add flex display */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    transform: translate(-10px, 0); /* Move slightly to the right */
+    animation: fadeIn 4s forwards; /* Apply fade-in animation */
+}
+
+.thank-note-box {
+    width: 100%;
+    padding: 40px; /* Increased padding */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 8px 0; /* Reduced margin */
+    display: flex; /* Add flex display */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    transform: translate(-70px, -70px); /* Move further left & up */
+}
+
+.details {
+    text-align: center; /* Center text alignment */
+    font-family: 'Eras Demi ITC', sans-serif; /* Changed font */
+}
+
+.details p {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+}
+
+.details .name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.details .title {
+    font-size: 20px; /* Reduced font size */
+    margin-top: 7px;
+    transform: translate(-35px, 0); /* Move title to the left */
+}
+
+.thank-note {
+    text-align: center; /* Center text alignment */
+}
+
+.thank-you {
+    font-size: 70px; /* Increased size */
+    color: #fff;
+    margin: 0;
+    animation: fadeIn 4s forwards; /* Prevent fading out */
+}
+
+.message {
+    font-size: 40px; /* Increased size */
+    color: #fff;
+    animation: fadeIn 4s forwards; /* Prevent fading out */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
